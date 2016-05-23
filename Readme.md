@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дмитрий Брусенцев](https://up.htmlacademy.ru/adaptive/7/user/108115).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Болтян](https://htmlacademy.ru/profile/id83202).
 
 ---
 
