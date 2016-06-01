@@ -1,0 +1,72 @@
+.product-of-the-week {
+  &__product {
+    padding-right: 29px;
+    padding-left: 29px;
+    
+    & h1 {
+      .h1();
+      color: #000;
+      
+    }
+    
+    & h2 {
+      font-family: OpenSans;
+      font-size: 16px;
+      color: #63d1bb;
+      font-weight: 700;
+      text-align: left;
+      line-height: 16px;
+    }
+    
+    & p {      
+      font-family: OpenSans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #444444;
+      margin-top: 31px;
+    }  
+  }
+  
+  & table {    
+    display: block;
+    margin-top: 35px;  
+  }
+  
+  &__specifics {       
+    .flex-row();
+    align-items: flex-start;
+    min-width: 260px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: OpenSans;
+    line-height: 20px;
+    color: #444444;    
+    border-bottom: 1px solid @grey;    
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+    &-name {      
+      min-width: 62px;
+      margin-right: 36px;     
+    }
+    
+    &-value {
+      align-self: flex-start;
+    }
+  }
+  
+  
+  &__price {
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #444444;
+    text-align: center;
+    margin-top: 20px;
+  }  
+  &__buy {
+    .btn-sub();
+  }
+}
