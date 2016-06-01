@@ -3,49 +3,64 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>    
+  <body class="body">    
     <header class="header-menu">
-      <div>       
-        <img src="http://placehold.it/86x35" alt="," class="header-menu__logo"> 
+      <div class="header-menu__wrap">       
+        <img src="img/logo-mobile.svg" alt="," class="header-menu__logo"> 
         <input id="mobile-menu-toggle" type="checkbox" class="invisible"></input>
         <label class="header-menu__toggle" for="mobile-menu-toggle"></label>
       </div>
       
       <ul class="header-menu__items">
-        <li class="header-menu__item"><a href="#"><span></span>Каталог товаров</a></li>
-        <li class="header-menu__item"><a href="#"><span></span>Вязание на заказ</a></li>        
+        <li class="header-menu__item">
+          <a class="header-menu__link" href="#"><span></span>Каталог товаров</a>
+        </li>
+        
+        <li class="header-menu__item">
+          <a class="header-menu__link" href="#"><span></span>Вязание на заказ</a>
+        </li>       
         
         <li class="header-menu__item  header-menu__item--search">          
-          <span><img src="http://placehold.it/18x18" alt=""></span>          
+          <span><img src="img/icon-search.svg" alt=""></span>          
           <input type="search" placeholder="Поиск по сайту"></input>
-        </li>        
+        </li>  
+              
         <li class="header-menu__item">
-          <a href="#"><span><img src="http://placehold.it/18x18" alt=""></span>Корзина: пока пуста</a>
+          <a class="header-menu__link" href="#">
+            <span><img src="img/icon-cart.svg" alt=""></span>Корзина: пока пуста
+          </a>
         </li>
       </ul>
     </header>  
     
-    <main>      
-      <div class="work-to-order-title">
+    <main class="order">      
+      <div class="order__work-to-order-title">
         <h1>Вязание на заказ</h1>
       </div>
 
-      <p class="order-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <p class="order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
       
-      <form action="#" class="order">
-        <div class="order-option">
+      <form action="#" class="order__form">
+        <div class="order__option">
           <div class="order__title  order__title--type">
             <h3>ТИП</h3>
             <span class="order__center-line"></span>
           </div>
 
-          <div class="order-option__type">
-            <input name="order-option-type" type="radio" id="interior-accessory" checked>
-            <label for="interior-accessory">Акссесуар для интерьера</label>
+          <div class="order__option-type">
+            <input class="invisible  order__option-type-input" name="order-option-type" type="radio" id="interior-accessory" checked>
+            <label class="order__option-type-label" for="interior-accessory">
+              <span class="order__option-type-checkbox"></span>
+              <span class="order__option-type-text">Акссесуар для интерьера</span>
+            </label>
 
-            <input name="order-option-type" type="radio" id="childrens-toy">
-            <label for="childrens-toy">Детская игрушка</label>
+            <input class="invisible  order__option-type-input" name="order-option-type" type="radio" id="childrens-toy">
+            <label class="order__option-type-label" for="childrens-toy">
+              <span class="order__option-type-checkbox"></span>
+              <span class="order__option-type-text">Детская игрушка</span>
+            </label>
           </div>
 
           <div class="order__title  order__title--color">
@@ -53,72 +68,90 @@
             <span class="order__center-line"></span>
           </div>
 
-          <div class="order-option__color">
-            <input class="invisible" type="checkbox" name="Белый" value="1" id="color-1">
-            <label for="color-1"><span class="order-option__checkbox-icon"></span>Белый</label>
+          <div class="order__option-color">
+            <input class="invisible  order__option-color-input" type="checkbox" name="Белый" value="1" id="color-1" checked>
+            <label class="order__option-color-label" for="color-1">
+              <span class="order__option-color-checkbox"></span>
+              <span class="order__option-color-text">Белый</span>
+            </label>
 
-            <input class="invisible" type="checkbox" name="Серый" value="2" id="color-2">
-            <label for="color-2"><span class="order-option__checkbox-icon"></span>Серый</label>
+            <input class="invisible  order__option-color-input" type="checkbox" name="Серый" value="2" id="color-2">
+            <label class="order__option-color-label" for="color-2">
+              <span class="order__option-color-checkbox"></span>
+              <span class="order__option-color-text">Серый</span>
+            </label>
 
-            <input class="invisible" type="checkbox" name="Тиффани" value="3" id="color-3">
-            <label for="color-3"><span class="order-option__checkbox-icon"></span>"Тиффани"</label>
+            <input class="invisible  order__option-color-input" type="checkbox" name="Тиффани" value="3" id="color-3">
+            <label class="order__option-color-label" for="color-3">
+              <span class="order__option-color-checkbox"></span>
+              <span class="order__option-color-text">"Тиффани"</span>
+            </label>
 
-            <input class="invisible" type="checkbox" name="Черный" value="4" id="color-4">
-            <label for="color-4"><span class="order-option__checkbox-icon"></span>Черный</label>
+            <input class="invisible  order__option-color-input" type="checkbox" name="Черный" value="4" id="color-4">
+            <label class="order__option-color-label" for="color-4">
+              <span class="order__option-color-checkbox"></span>
+              <span class="order__option-color-text">Черный</span>
+            </label>
 
-            <input class="invisible" type="checkbox" name="Розовый" value="5" id="color-5">
-            <label for="color-5"><span class="order-option__checkbox-icon"></span>Розовый</label>
+            <input class="invisible  order__option-color-input" type="checkbox" name="Розовый" value="5" id="color-5">
+            <label class="order__option-color-label" for="color-5">
+              <span class="order__option-color-checkbox"></span>
+              <span class="order__option-color-text">Розовый</span>
+            </label>
 
-            <input class="invisible" type="checkbox" name="Оранжевый" value="6" id="color-6">
-            <label for="color-6"><span class="order-option__checkbox-icon"></span>Оранжевый</label>
+            <input class="invisible  order__option-color-input" type="checkbox" name="Оранжевый" value="6" id="color-6">
+            <label class="order__option-color-label" for="color-6">
+              <span class="order__option-color-checkbox"></span>
+              <span class="order__option-color-text">Оранжевый</span>
+            </label>
           </div>
         </div>
         
-        <div class="order__full-name">
-          <div class="order__title  order__title--name">
+        <div class="order-full-name">
+          <div class="order__title  order-full-name__title-name">
             <h3>ФИО</h3>
             <span class="order__center-line"></span>
           </div>
           
-          <label for="order-last-name">Фамилия:</label>
-          <input type="text" id="order-last-name" placeholder="Укажите фамилию">
+          <label class="order-full-name__name" for="order-last-name">Фамилия:</label>
+          <input class="order-full-name__input" type="text" id="order-last-name" placeholder="Укажите фамилию">
           
-          <label for="order-first-name">Имя:</label>
-          <input type="text" id="order-first-name" placeholder="Введите ваше имя">
+          <label class="order-full-name__name" for="order-first-name">Имя:</label>
+          <input class="order-full-name__input" type="text" id="order-first-name" placeholder="Введите ваше имя">
           
-          <label for="order-middle-name">Отчество:</label>
-          <input type="text" id="order-middle-name" placeholder="Отчество, если желаете">
+          <label class="order-full-name__name" for="order-middle-name">Отчество:</label>
+          <input class="order-full-name__input" type="text" id="order-middle-name" placeholder="Отчество, если желаете">
         </div>
         
-        <div class="order__contact">
-          <div class="order__title  order__title--contact">
+        <div class="order-contact">
+          <div class="order__title  order-contact__title">
             <h3>ТЕЛ</h3>
             <span class="order__center-line"></span>   
           </div>       
              
-          <div class="order__contact-input-block">
+          <div class="order-contact__input-block">
             <input type="text" placeholder="+7 XXX XX XX">
-            <img src="http://placehold.it/25x25" class="order__contact-icon"></img>
+            <img src="/img/icon-phone.svg" class="order__contact-icon"></img>
           </div>
           
-          <div class="order__title  order__title--contact">
+          <div class="order__title  order-contact__title">
             <h3>E-MAIL</h3>
             <span class="order__center-line"></span>   
           </div>
           
-          <div class="order__contact-input-block">
+          <div class="order-contact__input-block">
             <input type="text" placeholder="Ваш e-mail">
-            <img src="http://placehold.it/32x22" class="order__contact-icon"></img>
+            <img src="img/icon-mail.svg" class="order__contact-icon"></img>
           </div>
           
-          <div class="order__title  order__title--add">
+          <div class="order__title  order-contact__title">
             <h3>ДОП</h3>
             <span class="order__center-line"></span>   
           </div>
           
-          <textarea class="your-wish" name="" id="" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="order-contact__your-wish" name="" id="" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           
-          <input class="order__sumbit" type="submit" value="ОТПРАВИТЬ ЗАКАЗ">
+          <input class="order-contact__submit" type="submit" value="ОТПРАВИТЬ ЗАКАЗ">
         </div>        
       </form>
     </main>
@@ -126,20 +159,22 @@
     <footer class="page-footer">
       <ul class="social-links">
         <li class="social-links__link  social-links--instg">
-          <a href="#"><img src="http://placehold.it/22x21" alt=""><span class="invisible">instagram</span></a>
+          <a href="#"><img src="img/icon-insta.svg" alt=""><span class="invisible">instagram</span></a>
         </li>
         <li class="social-links__link   social-links--facebook">
-          <a href="#"><img src="http://placehold.it/15x28" alt=""><span class="invisible">facebook</span></a>
+          <a href="#"><img src="img/icon-fb.svg" alt=""><span class="invisible">facebook</span></a>
         </li>
         <li class="social-links__link  social-links--twiter">
-          <a href="#"><img src="http://placehold.it/23x20" alt=""><span class="invisible">twiter</span></a>
+          <a href="#"><img src="img/icon-twitter.svg" alt=""><span class="invisible">twiter</span></a>
         </li>
       </ul>
       
       <div class="page-footer__line"></div>
       <div class="page-footer__designed-by">
         <h3>Разработано</h3>
-        <img src="http://placehold.it/27x34" alt="">
+        <a href="#">
+          <img src="img/logo-htmlacademy.svg" alt="">
+        </a>
       </div>
     </footer>
   </body>

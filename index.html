@@ -3,48 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>    
+  <body class="body">    
     <header class="header-menu">
-      <div>       
-        <img src="http://placehold.it/86x35" alt="," class="header-menu__logo"> 
+      <div class="header-menu__wrap">       
+        <img src="img/logo-mobile.svg" alt="," class="header-menu__logo"> 
         <input id="mobile-menu-toggle" type="checkbox" class="invisible"></input>
         <label class="header-menu__toggle" for="mobile-menu-toggle"></label>
       </div>
       
       <ul class="header-menu__items">
-        <li class="header-menu__item"><a href="#"><span></span>Каталог товаров</a></li>
-        <li class="header-menu__item"><a href="#"><span></span>Вязание на заказ</a></li>        
+        <li class="header-menu__item">
+          <a class="header-menu__link" href="#"><span></span>Каталог товаров</a>
+        </li>
+        
+        <li class="header-menu__item">
+          <a class="header-menu__link" href="#"><span></span>Вязание на заказ</a>
+        </li>       
         
         <li class="header-menu__item  header-menu__item--search">          
-          <span><img src="http://placehold.it/18x18" alt=""></span>          
+          <span><img src="img/icon-search.svg" alt=""></span>          
           <input type="search" placeholder="Поиск по сайту"></input>
-        </li>        
+        </li>  
+              
         <li class="header-menu__item">
-          <a href="#"><span><img src="http://placehold.it/18x18" alt=""></span>Корзина: пока пуста</a>
+          <a class="header-menu__link" href="#">
+            <span><img src="img/icon-cart.svg" alt=""></span>Корзина: пока пуста
+          </a>
         </li>
       </ul>
     </header>     
 
     <main>
-      <div class="background-house-with-toys">
+      <div class="backg-house-toys">
         <h1>Милые штуки ручной <br> работы для дома</h1>
       </div>
       
       <div class="types-of-goods">
-        <div class="types-of-goods__home-furnishings">
+        <div class="types-of-goods__home-furnishings  types-of-goods--item">
           <a href="#">Предметы <br> интерьера</a>
-          <div class="types-of-goods__img-wrap"><img src="http://placehold.it/40x62" alt="Лампа"></div>
+          <div class="types-of-goods__img-wrap"><img src="img/icon-interior.svg" alt="Лампа"></div>
         </div>
         
-        <div class="type-of-goods__kids-toys">
+        <div class="types-of-goods__kids-toys  types-of-goods--item">
           <a href="#">Детские <br> игрушки</a>
-          <div class="type-of-goods__img-wrap"><img src="http://placehold.it/60x60" alt="Игрушка"></div>
+          <div class="type-of-goods__img-wrap"><img src="img/icon-toy.svg" alt="Игрушка"></div>
         </div>        
       </div>
       
       <div class="product-of-the-week">
-        <article class="product-of-the-week__product">          
+        <article class="product-of-the-week__product">      
           <h1>Вязаные корзинки</h1>
           <h2>ТОВАР НЕДЕЛИ</h2>
           <p>Экологически чистая пряжа, ручная работа. Доступны в шерси расцветках, и трех размерах.</p>
@@ -52,7 +61,7 @@
           <table>
             <tr class="product-of-the-week__specifics">
               <td class="product-of-the-week__specifics-name">Цвет:</td>
-              <td class="product-of-the-week__specifics-value">"Тиффати/серый"</td>
+              <td class="product-of-the-week__specifics-value">"Тиффати"/серый</td>
             </tr>
             <tr class="product-of-the-week__specifics">
               <td class="product-of-the-week__specifics-name">Диаметр:</td>
@@ -64,62 +73,64 @@
             </tr>
           </table>
           
-          <div class="product-of-the-week__product-photo"><img src="http://placehold.it/260x315" alt=""></div>          
+          <div class="product-of-the-week__product-photo"><img src="img/triple-set-mobile@1x.jpg" alt=""></div>          
           <div class="product-of-the-week__price">Цена: 990 руб.</div>          
-          <a href="#" class="product-of-the-week__buy">Заказать</a>          
-          <div class="wavy-line"><img src="http://placehold.it/319x6" alt=""></div>
+          <a href="#" class="product-of-the-week__buy">Заказать</a> 
         </article>
+        <div class="wavy-line"><img src="http://placehold.it/319x6" alt=""></div>
       </div>
       
       <div class="about-us">
         <h1>Коротко о нас:</h1>
         
         <div class="about-us__item">
-          <div class="about-us__img-item"><img src="http://placehold.it/32x37" alt=""></div>
-          <p class="about-us__description">Экологически чистые материалы</p>
+          <div class="about-us__img-item"><img src="img/icon-feature-1.svg" alt=""></div>
+          <p class="about-us__description">Экологически <br> чистые материалы</p>
         </div>
         <div class="about-us__item">
-          <div class="about-us__img-item"><img src="http://placehold.it/47x27" alt=""></div>
-          <p class="about-us__description">Скандинавский стиль по российской цене</p>
+          <div class="about-us__img-item"><img src="img/icon-feature-2.svg" alt=""></div>
+          <p class="about-us__description">Скандинавский стиль <br> по российской цене</p>
         </div>
         <div class="about-us__item">
-          <div class="about-us__img-item"><img src="http://placehold.it/32x37" alt=""></div>
-          <p class="about-us__description">Увеличивает лайки на фотографиях</p>
+          <div class="about-us__img-item"><img src="img/icon-feature-3.svg" alt=""></div>
+          <p class="about-us__description">Увеличивает лайки <br> на фотографиях</p>
         </div>
         <div class="about-us__item">
-          <div class="about-us__img-item"><img src="http://placehold.it/32x37" alt=""></div>
-          <p class="about-us__description">Связано вручную с любовью и умилением</p>
+          <div class="about-us__img-item"><img src="img/icon-feature-4.svg" alt=""></div>
+          <p class="about-us__description">Связано вручную с <br> любовью и умилением</p>
         </div>
         <div class="about-us__item">
-          <div class="about-us__img-item"><img src="http://placehold.it/32x37" alt=""></div>
+          <div class="about-us__img-item"><img src="img/icon-feature-5.svg" alt=""></div>
           <p class="about-us__description">Поддержка отечественного производителя</p>
         </div>
         <div class="about-us__item">
-          <div class="about-us__img-item"><img src="http://placehold.it/32x37" alt=""></div>
-          <p class="about-us__description">Поставляется в подарочной упаковке</p>
+          <div class="about-us__img-item"><img src="img/icon-feature-6.svg" alt=""></div>
+          <p class="about-us__description">Поставляется в <br> подарочной упаковке</p>
         </div>
       </div>
       
       <div class="reviews">
         <div class="reviews__review">
+          <h1>Отзывы</h1>
           <p>Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, 
           как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои 
           фотографии сразу стали более стильнее, а также набирают больше лайков!
           </p>
           
-          <div class="reviews__author">Анастасия Красильникова <br><span>@misssssiskras</span></div>
+          <div class="reviews__author">Анастасия Красильникова <br><span class="reviews__author-span">@misssssiskras</span></div>
         </div>
         
         <div class="reviews__toggle">
-          <div class="reviews__prev"><img src="http://placehold.it/50x26" alt=""></div>
-          <div class="reviews__next"><img src="http://placehold.it/50x26" alt=""></div>
+          <div class="reviews__prev  reviews--arow"><img src="img/icon-left-arrow.svg" alt=""></div>
+          <div class="reviews__next  reviews--arow"><img src="img/icon-right-arrow.svg" alt=""></div>
         </div>
         
-        <a href="#" class="reviews__write-review">Написать</a>
-        <div class="wavy-line"><img src="http://placehold.it/319x6" alt=""></div>
+        <a href="#" class="reviews__write-review">Написать</a>        
       </div>
+      <div class="wavy-line"><img src="http://placehold.it/319x6" alt=""></div>
       
       <div class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
         <table>
           <tr class="contacts__text-style">
             <td class="contacts__contact-name">e-mail:</td>
@@ -133,7 +144,8 @@
       </div>
       
       <div class="map">
-        <img src="http://placehold.it/320x457" alt="">
+        <img src="img/map-mobile@1x.jpg" alt="">
+        <img src="img/icon-map-pin.svg" alt="">
       </div>
       
       <a href="#" class="write-to-us">НАПИШИТЕ НАМ</a>
@@ -142,20 +154,22 @@
     <footer class="page-footer">
       <ul class="social-links">
         <li class="social-links__link  social-links--instg">
-          <a href="#"><img src="http://placehold.it/22x21" alt=""><span class="invisible">instagram</span></a>
+          <a href="#"><img src="img/icon-insta.svg" alt=""><span class="invisible">instagram</span></a>
         </li>
         <li class="social-links__link   social-links--facebook">
-          <a href="#"><img src="http://placehold.it/15x28" alt=""><span class="invisible">facebook</span></a>
+          <a href="#"><img src="img/icon-fb.svg" alt=""><span class="invisible">facebook</span></a>
         </li>
         <li class="social-links__link  social-links--twiter">
-          <a href="#"><img src="http://placehold.it/23x20" alt=""><span class="invisible">twiter</span></a>
+          <a href="#"><img src="img/icon-twitter.svg" alt=""><span class="invisible">twiter</span></a>
         </li>
       </ul>
       
       <div class="page-footer__line"></div>
       <div class="page-footer__designed-by">
         <h3>Разработано</h3>
-        <img src="http://placehold.it/27x34" alt="">
+        <a href="#">
+          <img src="img/logo-htmlacademy.svg" alt="">
+        </a>
       </div>
     </footer>
   </body>
