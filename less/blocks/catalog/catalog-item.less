@@ -1,0 +1,38 @@
+.catalog-item {
+  margin-bottom: 30px;
+  border: 1px solid @grey;
+  
+  &__link {
+    text-decoration: none;
+  }
+  
+  &__description {
+    padding: 30px;
+    
+    & h3 {
+      .h3-catalog();
+    } 
+  }
+  
+  
+  &__parameters {
+    .p();
+    margin-top: 5px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid @grey;
+  }
+  
+  &__price {
+    .flex-row();
+    justify-content: space-between;
+    margin-top: 22px;
+  }
+  
+  &__price-value {
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 24px;
+  }
+}
