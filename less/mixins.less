@@ -1,8 +1,14 @@
-@grey: #ececec;
-
 .center() {
   display: block;
   margin: 0 auto;
+}
+
+.visible() {
+  display: block;
+}
+
+.visible {
+  .visible();
 }
 
 .invisible() {
@@ -36,75 +42,87 @@
   font-family: OpenSansBold;
   font-size: 16px;
   line-height: 16px;    
-  color: #444444;
+  color: @color-444;
   text-align: center;
-  border: 2px solid #444444;
+  border: 2px solid @color-444;
   text-decoration: none;
   text-transform: uppercase;
-  padding-top: 19px;
-  padding-bottom: 21px;
-  margin-top: 28px;
+  padding-top: 17px;
+  padding-bottom: 17px;  
   max-width: @width;
-  background: #fff;
-}
-
-.h1() {
-  font-size: 24px;
-  font-weight: 700;
-  font-family: Verdana;
-  text-align: center;
-  line-height: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.h3-catalog() {
-  font-family: Verdana;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #000000;
-  padding: 0;
-  margin: 0;
-}
-
-.p() {
-  font-family: OpenSans;
-  font-size: 14px;
-  font-weight: 400;
-  color: #444444;
-  line-height: 30px;
-  padding: 0;
-  margin: 0;
+  background: @white;
+  cursor: pointer;
 }
 
 .page-title() {
   .flex();
-  background: @grey;
+  background: @grey-title;
   min-height: 177px;  
-  justify-content: center;
-  
-  & h1 {
-    .h1();  
-  }
+  justify-content: center;    
+}
+
+.txt-verdana(@font: @txt-16px, @line: @line-24, @color: @black) {
+  font-family: Verdana;
+  font-weight: 700;
+  font-size: @font;  
+  color: @color;
+  line-height: @line;  
+  margin: 0;
+  padding: 0;
+}
+
+.txt-tahoma(@font: @txt-18px, @line: @line-24, @color: @black) {
+  color: @color;
+  font-size: @font;
+  font-family: Tahoma;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: @line;
+}
+
+.h1(@size: @h1-mobile, @color: @black, @line: @line-30) {
+  font-size: @size;
+  font-weight: 700;
+  font-family: Verdana;
+  text-align: center;
+  line-height: @line;
+  color: @color;
+  margin: 0;
+  padding: 0;
+}
+
+.txt-opensans(@font: @txt-14px, @line: @line-30, @weight: 400) {  
+  font-family: OpenSans;
+  font-size: @font;
+  font-weight: @weight;
+  color: @color-444;
+  line-height: @line;
+  padding: 0;
+  margin: 0;
 }
 
 .form-label() {
   font-family: Verdana;
   font-size: 16.87px;
   font-weight: 700;
-  color: #000000;
+  color: @black;
   line-height: 19px;  
 }
 
-.form-input {
+.form-input() {
   border: none;
   outline: none;
   font-family: Verdana;
   font-size: 16.87px;
   font-weight: 400;
   line-height: 19px;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid @black;
   padding-bottom: 16px;
   margin-bottom: 26px;
+}
+
+.clear-fix() {
+  content: '';
+  display: block;
+  clear: both;
 }

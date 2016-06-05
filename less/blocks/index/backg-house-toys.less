@@ -1,17 +1,38 @@
-.backg-house-toys {  
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: center;
-  background: url(/img/hero-mobile@1x.jpg)no-repeat 50% 0%;
-  min-height: 300px;
+.backg-house-toys {    
+  background: @color-backg url(/img/hero-mobile@1x.jpg)no-repeat 50% 0%;
+  min-height: 300px;  
   
-  & h1 {    
-    .h1();
-    display: inline-block;
+  &__title {    
+    .h1();   
     margin-top: 53px;      
   }  
  
+}
+
+@media @tablet-width {
+  .backg-house-toys {
+    .flex();    
+    background: @color-backg url(/img/hero-tablet.jpg)no-repeat 50% 0%;
+    width: 100%;
+  }
+  
+  .backg-house-toys__title {    
+    .h1(@h1-tablet);
+    line-height: 50px;
+    margin-top: 150px;
+    margin-bottom: 375px;
+  }  
+}
+
+
+@media @desktop-width {
+  .backg-house-toys {
+    background: @color-backg url(/img/hero-desktop.jpg)no-repeat 50% 0%;
+  }
+  
+  .backg-house-toys__title {
+    font-size: @h1-desktop;
+    margin-top: 165px;
+    margin-bottom: 360px;
+  }
 }
