@@ -1,8 +1,19 @@
-.catalog-wrap {
+.catalog-wrap {  
+  .center();
   .flex-row();
   flex-wrap: wrap;  
   padding: 30px; 
   justify-content: center;
-  align-items: center;
-  align-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;    
+}
+
+
+@media @desktop-width {
+  .catalog-wrap {
+    .flex-row();   
+    width: @desktop-wrap;
+    padding: 0;  
+    margin-bottom: 57px;
+  }
 }

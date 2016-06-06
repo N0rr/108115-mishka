@@ -10,33 +10,39 @@
     <header class="header-menu">
       <div class="header-menu__header-wrap">
         <ul class="header-menu__items"> 
-          <li class="header-menu__item-logo">       
+          <li class="header-menu__item--logo">       
             <img src="img/logo-mobile.svg" alt="," class="header-menu__logo"> 
             <input id="mobile-menu-toggle" type="checkbox" class="invisible"></input>
             <label class="header-menu__toggle" for="mobile-menu-toggle"></label>
           </li>   
                 
-          <li class="header-menu__item">
+          <li class="header-menu__item  header-menu__item--catalog">
             <a class="header-menu__link  header-menu__link--catalog" href="#">
             <span class="header-menu__span-mobile  header-menu__tablet-desktop-invisible"></span>Каталог товаров</a>
           </li>
 
-          <li class="header-menu__item">
+          <li class="header-menu__item  header-menu__item--order">
             <a class="header-menu__link  header-menu__link--order" href="#">
             <span class="header-menu__span-mobile  header-menu__tablet-desktop-invisible"></span>Вязание на заказ</a>
           </li>
 
           <li class="header-menu__item  header-menu__item--search">          
             <span class="header-menu__span-mobile"><img src="img/icon-search.svg" alt=""></span>      
-            <input type="search" placeholder="Поиск по сайту"></input>
+            <input type="search" value="Поиск по сайту"></input>
           </li>  
 
-          <li class="header-menu__item  header-menu--cart">
+          <li class="header-menu__item  header-menu__item--cart">
             <a class="header-menu__link" href="#">
               <span class="header-menu__span-mobile"><img src="img/icon-cart.svg" alt=""></span>Корзина: пока пуста
             </a>
-          </li>   
-          <li class="header-menu__free-shipping  invisible">Бесплатная доставка по России</li>
+          </li>  
+          <li class="header-menu__item--new-items  invisible">
+            <a class="header-menu__link  header-menu__link--small" href="#">Новые поступления</a>
+          </li> 
+          <li class="header-menu__item--sale  invisible">
+            <a class="header-menu__link  header-menu__link--small" href="#">Распродажа</a>
+          </li>
+          <li class="header-menu__item--free-shipping  invisible">Бесплатная доставка по России</li>
         </ul>
       </div>      
     </header>  

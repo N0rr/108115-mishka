@@ -4,12 +4,12 @@
   flex-wrap: wrap;  
   margin-bottom: 30px;
   margin-right: 10px;
-  border: 1px solid @grey;  
+  border: 1px solid @grey; 
   
   &__link {
     .flex();
     flex-grow: 1;
-    text-decoration: none;
+    text-decoration: none;    
   }
   
   &__img-item {
@@ -47,11 +47,7 @@
   }
   
   &__price-value {
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 700;
-    color: #000000;
-    line-height: 24px;
+    .txt-verdana(@txt-14px);    
   }
 }
 
@@ -62,7 +58,7 @@
   }
   
   .catalog-item__link {
-    .flex-row();
+    .flex-row();    
   }
   
   .catalog-item__img {
@@ -72,14 +68,58 @@
   }
   
   .catalog-item__description {
-    .flex();
+    .flex();    
+    flex-grow: 1;
   }
   
   .catalog-item__item-title {
-    flex-grow: 0;
+    flex-grow: 1;
   }
   
   .catalog-item__parameters {
     flex-grow: 1;
+  }
+}
+
+
+@media @desktop-width {
+  .catalog-item {  
+    width: 316px;   
+    height: 100%;
+    margin: 0;
+  }
+  
+  .catalog-item:not(:nth-child(3n)) {
+    margin-right: 45px;
+  }
+  
+  .catalog-item__link {
+    .flex();   
+    width: 316px; 
+   
+    
+  }
+  
+  .catalog-item__img {    
+    height: 462px;
+    width: 316px;
+  }
+  
+  .catalog-item__img-item {
+    
+  }
+  
+  .catalog-item__item-title {    
+    font-size: @txt-18px; 
+    align-self: stretch;    
+  }
+  
+  .catalog-item__parameters {
+    font-size: @txt-15px;  
+    
+  }
+  
+  .catalog-item__description {
+    align-self: stretch;
   }
 }
