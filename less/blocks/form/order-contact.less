@@ -11,31 +11,129 @@
     justify-content: space-between;
   }
   
-  & input {
+  &__input {
     border: none;
     outline: none;
+    color: @grey-rgba;
   }
   
-  & img {
+  &__icon {
     margin-right: 8px;
+  }
+  
+  &__message {
+    .flex();
+    margin-bottom: 40px;
   }
   
   &__your-wish {
     .form-label();
     font-weight: 400;
-    color: rgba(68, 68, 68, 0.3);    
-    border: 2px solid #000;
-    min-height: 130px;
-    min-width: 220px;  
+    color: @grey-rgba;    
+    border: 2px solid @black;
+    min-height: 130px;    
     resize: none;
-    margin-top: 4px;
-    padding: 19px;    
+    margin-top: 4px;   
+    padding: 19px;  
   }
   
-  &__submit {   
+  &__submit {  
+    .center();
     .btn-sub();
     padding-right: 52px;
     padding-left: 52px;
-    box-shadow: 0px 0px 0px 2px;
   }
 }
+
+
+@media @tablet-width {
+  .order-contact {
+    background: @grey-title;
+    padding-top: 72px;
+    padding-bottom: 67px;
+    margin-bottom: 64px;
+  }
+  
+  .order-contact__wrapper {
+    .center();
+    width: @tablet-wrap;
+  }
+  
+  .order-contact__input {
+    background: none;
+    font-size: @txt-18px;        
+  }
+  
+  .order-contact__icon {
+    margin-right: 25px;
+  }
+  
+  .order-contact__message {
+    width: @tablet-wrap;
+    .center();
+    .flex-row();
+  }
+  
+  .order-contact__your-wish {
+    font-size: @txt-18px; 
+    flex-grow: 1;
+    margin-bottom: 53px;
+  }
+  
+  .order-contact__title {
+    align-self: baseline;
+  }
+  
+  .order-contact__submit-wrapper {
+    width: @tablet-wrap;
+    .center();
+    .flex-row();
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 52px; 
+  }
+  
+  .order-contact__submit {
+    margin: 0;    
+    padding-right: 36px;
+    padding-left: 36px;    
+  }
+  
+  .order-contact__submit-span {
+    .visible();
+    .txt-opensans(@txt-16px);
+  }
+}
+
+
+@media @desktop-width {
+  .order-contact__wrapper {
+    width: @desktop-contact-wrap;
+    .flex-row();
+    flex-wrap: wrap;
+    
+  }
+  
+  .order-contact__input-block {
+    flex-grow: 1;
+    width: 600px;
+  }
+  
+  .order-contact__message {
+    width: @desktop-contact-wrap;
+  }
+  
+  .order-contact__submit-wrapper {
+    width: @desktop-contact-wrap;  
+    justify-content: flex-end;
+  }
+  
+  .order-contact__submit-span {
+   margin-left: 172px;
+  }
+}
+
+
+
+
+

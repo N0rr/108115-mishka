@@ -1,0 +1,22 @@
+@media @tablet-width {
+  .contacts-map-container {
+        
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media @desktop-width {
+  .contacts-map-container {
+    .center();    
+    width: @desktop-wrap;
+    margin-top: 71px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 105px;
+  }
+  
+  .contacts-map-container::after {
+    .clear-fix();
+  }
+}

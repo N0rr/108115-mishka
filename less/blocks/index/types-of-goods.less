@@ -1,17 +1,16 @@
 .types-of-goods {  
+  .center();
+  
   &--item {
-    .flex-row();
+    .flex-row();    
     min-height: 103px;    
     justify-content: space-around;
     align-items: center;
-    
-    & a {
-      color: #ffffff;
-      font-size: 18px;
-      font-family: Tahoma;
-      text-decoration: none;
-      font-weight: 700;
-    }
+    text-decoration: none;
+  }
+  
+  &__text {
+    .txt-tahoma(@txt-18px, @color: @white);      
   }
   
   &__home-furnishings {  
@@ -24,7 +23,43 @@
   
   &__img-wrap {  
     .flex();
-    width: 60px;    
-    
+    width: 60px;  
   }
 }
+
+
+@media @tablet-width {
+  .types-of-goods {
+    .center();
+    .flex-row();  
+    width: @tablet-wrap;  
+    margin-bottom: 42px;
+  }
+  
+  .types-of-goods--item {    
+    flex-grow: 1;  
+    min-height: 119px;    
+  }  
+    
+  .types-of-goods__img-wrap {
+    width: auto;   
+  }
+  
+  .types-of-goods__text {
+    .txt-tahoma(@txt-20px, 30px, @white);  
+  }
+}
+
+@media @desktop-width {
+  .types-of-goods {
+    width: @desktop-wrap;
+    margin-bottom: 71px;
+  }
+  
+  .types-of-goods--item {
+    justify-content: space-between;
+    padding-right: 36px;
+    padding-left: 39px;
+  }
+}
+  

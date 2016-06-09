@@ -1,47 +1,49 @@
-.product-of-the-week {
+.product-of-the-week {  
+  .center();
   &__product {
-    padding-right: 29px;
-    padding-left: 29px;
-    
-    & h1 {
-      .h1();
-      color: #000;
-      
-    }
-    
-    & h2 {
-      font-family: OpenSans;
-      font-size: 16px;
-      color: #63d1bb;
-      font-weight: 700;
-      text-align: left;
-      line-height: 16px;
-    }
-    
-    & p {      
-      font-family: OpenSans;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 24px;
-      color: #444444;
-      margin-top: 31px;
-    }  
+    .flex();
+    align-items: center;   
+    margin-top: 33px;     
   }
   
-  & table {    
-    display: block;
-    margin-top: 35px;  
+  &__ title {
+    margin-bottom: 31px;
+  }
+  
+  &__title-h1 {
+    .h1();    
+  }
+
+  &__title-h2 {
+    font-family: OpenSans;
+    font-size: 16px;
+    color: #63d1bb;
+    font-weight: 700;
+    text-align: left;
+    line-height: 16px;
+  }
+  
+  &__info {
+    .flex();
+    align-items: center;
+  }
+
+  &__text {      
+    .txt-opensans(@txt-14px);
+    width: 247px;
+    margin-bottom: 35px;
+  } 
+  
+  &__table {     
+    align-items: center;
+    width: 260px;
   }
   
   &__specifics {       
     .flex-row();
+    .txt-opensans();
     align-items: flex-start;
     min-width: 260px;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: OpenSans;
-    line-height: 20px;
-    color: #444444;    
     border-bottom: 1px solid @grey;    
     padding-bottom: 10px;
     padding-top: 10px;
@@ -56,17 +58,167 @@
     }
   }
   
+  &__product-photo {    
+    height: 315px;
+    width: 260px;
+    margin-top: -2px;
+    margin-bottom: 20px;
+    background: url(/img/triple-set-mobile@1x.jpg) 50% 50%;
+  }
   
   &__price {
-    font-family: Verdana;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #444444;
-    text-align: center;
-    margin-top: 20px;
+    .txt-verdana();
+    text-align: center; 
+    color: @color-444;
+    margin-bottom: 28px;
   }  
   &__buy {
     .btn-sub();
+    margin-bottom: 35px;    
+    min-width: @mobile-wrap;
   }
 }
+
+
+@media @tablet-width {
+  .product-of-the-week {  
+    width: @tablet-wrap;    
+    margin-bottom: 52px;
+  }
+  
+  .product-of-the-week__product {
+    .flex();
+    position: relative;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+  }
+  
+  .product-of-the-week__title {
+    .flex-row();
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .product-of-the-week__title-h1 {
+    font-size: 40px;
+    line-height: 50px;
+    order: 1;
+  }
+  
+  .product-of-the-week__title-h2 {
+    order: 2;
+    font-size: 16px;
+    line-height: 16px;
+    width: 66px;
+    text-align: center;
+    margin-right: 30px;
+  }
+  
+  .product-of-the-week__info {
+    align-self: flex-start;
+  }
+  .product-of-the-week__text {
+    .txt-opensans(@txt-16px);
+    width: 282px; 
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: 35px;  
+  }
+  
+  .product-of-the-week__table { 
+    width: 291px;
+    margin-bottom: 45px;
+  }
+  
+  .product-of-the-week__specifics {
+    .txt-opensans(@txt-14px);
+    padding-bottom: 5px;
+    padding-top: 5px;    
+  }
+  
+  .product-of-the-week__product-photo { 
+    position: absolute;
+    right: 0;
+    top: 115px;
+    height: 404px;
+    width: 333px;
+    background: url(/img/triple-set-tablet.jpg)50% 50%;
+  }
+  
+  .product-of-the-week__price-block {
+    .flex();
+    align-self: flex-start;
+  }
+  
+  .product-of-the-week__price {
+    font-size: @txt-18px;
+    margin-bottom: 35px;
+  }
+  
+  .product-of-the-week__buy {
+    width: 288px;
+    margin: 0;
+  }
+}
+
+@media @desktop-width {
+  .product-of-the-week{
+    width: @desktop-wrap;
+    margin-bottom: 73px;
+  }
+  
+  .product-of-the-week__title {
+    justify-content: flex-start;
+    margin-top: 62px;    
+  }
+  
+  .product-of-the-week__title-h1 {
+    font-size: @h1-desktop;
+  }
+  
+  .product-of-the-week__title-h2 {
+    order: -1;
+    margin-right: 60px;  
+    margin-left: 49px;
+  }
+  
+  .product-of-the-week__product-photo {
+    height: 636px;
+    width: 525px;
+    top: 0;
+    background: url(/img/triple-set-desktop.jpg)no-repeat 0% 0%;
+    z-index: -1;
+  }
+  
+  .product-of-the-week__info {
+    margin-left: 175px;
+    margin-bottom: 55px;    
+  }  
+  
+  .product-of-the-week__price-block {
+    margin-left: 175px;
+  } 
+  
+  .product-of-the-week__buy {
+    width: 292px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,9 @@
 .page-footer {
   background: #f1f1f1;
+  padding-bottom: 32px;
+  
   &__line {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 29px;
     background: #e5e5e5;
@@ -11,14 +13,49 @@
   &__designed-by {    
     .flex-row();    
     justify-content: center;
+    align-content: center;
     align-items: center;
   
   & h3 {
-    font-family: Verdana;
-    font-size: 18px;
-    font-weight: 700;
-    margin-right: 25px;
-    margin-bottom: 32px;
+    .txt-verdana(@txt-18px);
+    margin-right: 25px;    
     }
   }
+}
+
+
+@media @tablet-width {
+  .page-footer {
+    .flex();
+    justify-content: space-between;  
+    padding: 0;
+  }
+  
+  .page-footer__wrapper {
+    .center();
+    .flex-row();
+    align-items: center;
+    width: @tablet-wrap;
+    justify-content: space-between;
+    min-height: 143px;
+  }
+  
+  .page-footer__line {
+    display: none;
+  }
+  
+  .page-footer__logo {
+    display: block;
+    width: 102px;
+    height: 34px;
+  }
+}
+
+@media @desktop-width {
+  .page-footer {    
+  }
+  
+  .page-footer__wrapper {
+    width: @desktop-wrap;
+  } 
 }

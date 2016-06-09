@@ -1,18 +1,23 @@
 .reviews {
+  .center();
   padding-right: 30px;
   padding-left: 30px;
   margin-top: 63px;
+  margin-bottom: 44px;
   
   &__review {
-    & h1 {
-      .h1();
-      color: #000000;
-      
-    }
-    & p {
-      .p();
-    }    
+    
   }
+  
+  &__title {
+    .h1();
+    color: #000000;
+    margin-bottom: 40px;
+  }
+  
+  &__text {
+    .txt-opensans();
+  }    
   
   
   &__author {
@@ -26,12 +31,12 @@
   &__author-span {
     display: block;
     margin-top: 10px;
+    margin-bottom: 36px;
     font-weight: 400;
   }
   
   &__toggle {
-    .flex-row();    
-    margin-top: 36px;
+    .flex-row();  
   }
   
   &--arow {
@@ -41,6 +46,8 @@
     justify-content: center;
     width: 50%;
     border: 1px solid @grey;
+    cursor: pointer;
+    margin-bottom: 38px;
   }
   
   &__prev {
@@ -49,5 +56,78 @@
   
   &__write-review {
     .btn-sub();
+  }
+}
+
+
+@media @tablet-width {
+  .reviews {    
+    padding: 0;    
+    background: url(/img/review.jpg)no-repeat 0% 0%;
+    width: 768px;
+    min-height: 457px;
+    margin-bottom: 52px;
+  }
+  
+  .reviews__wrap {
+    .center();
+    .flex-row();
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: @tablet-wrap;
+    padding-top: 75px;
+  }
+  
+  .reviews__title {
+    .h1(@h1-tablet, @black, @h1-tablet-line);
+    text-align: left;
+    margin-bottom: 60px;
+    order: -2;
+  }
+  
+  .reviews__text {
+    .txt-opensans(@txt-16px);   
+    margin-bottom: 10px;
+  }
+  
+  .reviews__author {
+    .txt-opensans(@txt-16px);
+    font-weight: 700;
+    color: @black;  
+  }
+  
+  .reviews__author-span {
+    margin-top: 0px;    
+  }
+  
+  .reviews__toggle {
+    margin-right: 10px;
+  }
+  
+  .reviews__prev {
+    margin-right: 37px;
+    border: none;        
+  }
+  
+  .reviews__next {
+    border: none;    
+  }
+  
+  .reviews__write-review { 
+    order: -1;
+    width: 171px; 
+  }
+}
+
+
+@media @desktop-width {
+  .reviews {
+    width: @desktop-wrap;
+    margin-bottom: 67px;
+  }
+  
+  .reviews__title {
+    font-size: @h1-desktop;
   }
 }

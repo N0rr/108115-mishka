@@ -5,7 +5,11 @@
    &__title-name {
      margin-bottom: 35px;
    }
-  
+   
+   &__item {
+     .flex();
+   }
+   
    &__name {
      .form-label();
      margin-bottom: 22px;
@@ -13,7 +17,53 @@
    
    &__input {
      .form-input();
+     color: @grey-rgba;
    }
 }
+
+
+@media @tablet-width {
+  .order-full-name {
+    .center();
+    .flex-row();    
+    width: @tablet-wrap;
+  }  
   
+   .order-full-name__title-name {
+     align-self: baseline;
+     min-height: 20px;
+  }
   
+  .order-full-name__items {
+    .flex-row();
+    flex-wrap: wrap;    
+  }
+  
+  .order-full-name__item {
+    .flex-row();
+    align-items: baseline; 
+    width: 100%;
+  }
+  
+  .order-full-name__name {
+    margin-right: 25px;
+    font-size: @txt-18px;     
+  }  
+  
+  .order-full-name__input {
+    font-size: @txt-18px;
+    flex-grow: 1;    
+  }
+ 
+}
+  
+
+@media @desktop-width {
+  .order-full-name {
+    width: @desktop-contact-wrap;
+  }
+  
+  .order-full-name__input {
+    
+  }
+}

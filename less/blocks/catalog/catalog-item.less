@@ -1,25 +1,43 @@
-.catalog-item {
+.catalog-item {  
+  .flex();
+  width: @mobile-wrap;
+  flex-wrap: wrap;  
   margin-bottom: 30px;
-  border: 1px solid @grey;
+  margin-right: 10px;
+  border: 1px solid @grey; 
   
   &__link {
-    text-decoration: none;
+    .flex();
+    flex-grow: 1;
+    text-decoration: none;    
+  }
+  
+  &__img-item {
+    
+  }
+  
+  &__img {
+    width: 260px;
+    height: 200px;
   }
   
   &__description {
+    .flex();
+    flex-grow: 1;
     padding: 30px;
-    
-    & h3 {
-      .h3-catalog();
-    } 
   }
   
+  &__item-title {
+    .txt-verdana();    
+    flex-grow: 1;
+  } 
+
   
   &__parameters {
-    .p();
+    .txt-opensans();
     margin-top: 5px;
     padding-bottom: 17px;
-    border-bottom: 1px solid @grey;
+    border-bottom: 1px solid @grey;    
   }
   
   &__price {
@@ -29,10 +47,79 @@
   }
   
   &__price-value {
-    font-family: Verdana;
-    font-size: 14px;
-    font-weight: 700;
-    color: #000000;
-    line-height: 24px;
+    .txt-verdana(@txt-14px);    
+  }
+}
+
+@media @tablet-width {
+  .catalog-item {
+    width: @tablet-wrap;
+    margin-bottom: 54px;
+  }
+  
+  .catalog-item__link {
+    .flex-row();    
+  }
+  
+  .catalog-item__img {
+    display: block;
+    height: 334px;
+    width: 334px;
+  }
+  
+  .catalog-item__description {
+    .flex();    
+    flex-grow: 1;
+  }
+  
+  .catalog-item__item-title {
+    flex-grow: 1;
+  }
+  
+  .catalog-item__parameters {
+    flex-grow: 1;
+  }
+}
+
+
+@media @desktop-width {
+  .catalog-item {  
+    width: 316px;   
+    height: 100%;
+    margin: 0;
+  }
+  
+  .catalog-item:not(:nth-child(3n)) {
+    margin-right: 45px;
+  }
+  
+  .catalog-item__link {
+    .flex();   
+    width: 316px; 
+   
+    
+  }
+  
+  .catalog-item__img {    
+    height: 462px;
+    width: 316px;
+  }
+  
+  .catalog-item__img-item {
+    
+  }
+  
+  .catalog-item__item-title {    
+    font-size: @txt-18px; 
+    align-self: stretch;    
+  }
+  
+  .catalog-item__parameters {
+    font-size: @txt-15px;  
+    
+  }
+  
+  .catalog-item__description {
+    align-self: stretch;
   }
 }

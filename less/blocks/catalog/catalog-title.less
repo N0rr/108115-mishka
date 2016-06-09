@@ -1,3 +1,33 @@
 .catalog-title {
-  .page-title();
+  .page-title();  
+}
+
+.catalog-title__title {
+  .h1();
+}
+
+
+@media @tablet-width {
+  .catalog-title {
+    .page-title();  
+    margin-bottom: 67px;
+  }
+
+  .catalog-title__title {
+    .h1(@h1-tablet, @line: @h1-tablet-line);
+    margin-top: 104px;
+    padding-bottom: 85px;    
+  }
+}
+
+
+@media @desktop-width {
+  .catalog-title {
+    margin-bottom: 111px;
+  }
+  
+  .catalog-title__title {
+    padding-bottom: 111px;
+    font-size: 50px;
+  }
 }
