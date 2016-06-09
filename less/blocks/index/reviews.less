@@ -1,9 +1,8 @@
 .reviews {
   .center();
   padding-right: 30px;
-  padding-left: 30px;
-  margin-top: 63px;
-  margin-bottom: 44px;
+  padding-left: 30px;  
+  margin-bottom: 35px;
   
   &__review {
     
@@ -12,27 +11,28 @@
   &__title {
     .h1();
     color: #000000;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+    text-align: left;
   }
   
   &__text {
     .txt-opensans();
+    margin-bottom: 14px;
   }    
   
   
   &__author {
-    font-family: OpenSans;
-    font-size: 14px;
-    font-weight: 700;
-    color: #000000;
-    margin-top: 30px;
+    .txt-opensans(@txt-15px, @weight: 700);  
+    letter-spacing: 1px;
+    margin-bottom: 27px;
   }
   
   &__author-span {
+    font-size: @txt-14px;
     display: block;
-    margin-top: 10px;
-    margin-bottom: 36px;
+    margin-top: 0px;    
     font-weight: 400;
+    letter-spacing: 0;
   }
   
   &__toggle {
@@ -47,7 +47,7 @@
     width: 50%;
     border: 1px solid @grey;
     cursor: pointer;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
   }
   
   &__prev {
@@ -66,7 +66,7 @@
     background: url(/img/review.jpg)no-repeat 0% 0%;
     width: 768px;
     min-height: 457px;
-    margin-bottom: 52px;
+    margin-bottom: 72px;
   }
   
   .reviews__wrap {
@@ -82,27 +82,30 @@
   .reviews__title {
     .h1(@h1-tablet, @black, @h1-tablet-line);
     text-align: left;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
     order: -2;
   }
   
   .reviews__text {
     .txt-opensans(@txt-16px);   
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
   
   .reviews__author {
     .txt-opensans(@txt-16px);
     font-weight: 700;
+    letter-spacing: 1.8px;
     color: @black;  
   }
   
   .reviews__author-span {
+    font-size: @txt-16px;
     margin-top: 0px;    
   }
   
   .reviews__toggle {
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-top: 5px;
   }
   
   .reviews__prev {
@@ -116,18 +119,44 @@
   
   .reviews__write-review { 
     order: -1;
-    width: 171px; 
+    width: 174px; 
+    margin-top: 5px;
   }
 }
 
 
 @media @desktop-width {
   .reviews {
+    .flex();
+    align-items: flex-start;    
     width: @desktop-wrap;
-    margin-bottom: 67px;
+    margin-bottom: 63px;    
   }
   
   .reviews__title {
     font-size: @h1-desktop;
+    margin-bottom: 54px;    
+    letter-spacing: -1px;
   }
+  
+  .reviews__wrap {
+    margin-right: 0;
+    padding-top: 72px;
+    width: @desktop-content; 
+  }
+  
+  .reviews__text {
+    width: 80%;
+  }
+  
 }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -3,15 +3,22 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;  
+  margin-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 30px;
   
   &__title {
     .h1();     
     margin-bottom: 33px;
     width: 100%;
+    margin-right: 15%;
   }  
   
-  &__list {   
-    
+  &__items {   
+    .flex-row();
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   &__item {
@@ -19,11 +26,11 @@
   }
   
   &__img-item {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   
   &__description {
-    .txt-verdana(); 
+    .txt-verdana(@line: auto); 
     margin-bottom: 32px;
   }
 }
@@ -36,14 +43,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: @tablet-wrap;
-    margin-top: 58px;
+    margin-top: 53px;
+    margin-bottom: 75px;
   }
   
   .about-us__title {
     .h1(@h1-tablet);
     text-align: left;
+    letter-spacing: -1px;
     width: 100%;  
-    margin-bottom: 52px;
+    margin-bottom: 6px;
   }
   
   .about-us__items {
@@ -71,24 +80,28 @@
 
 @media @desktop-width {
   .about-us {    
+    .flex();
+    align-items: flex-end;
     width: @desktop-wrap;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
   
   .about-us__title {
     font-size: @h1-desktop;
     line-height: @line-57;
+    width: @desktop-content;
     margin-bottom: 48px;
     margin-left: 175px;
   }
   
-  .about-us__items {
-    margin-left: 175px;
+  .about-us__items {    
+    width: @desktop-content;
+    margin-right: 0;
     justify-content: flex-start;
   }
   
   .about-us__list {    
-    margin-right: 132px;
+    margin-right: 90px;
   }
   
   .about-us__item {

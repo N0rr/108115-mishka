@@ -1,6 +1,6 @@
  .order-full-name {
-   .flex();  
-   margin-top: 6px;
+   .flex();
+   margin-bottom: 9px;
    
    &__title-name {
      margin-bottom: 35px;
@@ -12,12 +12,14 @@
    
    &__name {
      .form-label();
-     margin-bottom: 22px;
+     letter-spacing: -0.7px;
+     margin-bottom: 15px;
    }
    
    &__input {
      .form-input();
      color: @grey-rgba;
+     letter-spacing: -0.7px;     
    }
 }
 
@@ -27,6 +29,7 @@
     .center();
     .flex-row();    
     width: @tablet-wrap;
+    margin-bottom: 28px;
   }  
   
    .order-full-name__title-name {
@@ -43,16 +46,20 @@
     .flex-row();
     align-items: baseline; 
     width: 100%;
+    margin-bottom: 12px;
   }
   
   .order-full-name__name {
     margin-right: 25px;
-    font-size: @txt-18px;     
+    font-size: @txt-18px;  
+    letter-spacing: 0.2px;
   }  
   
   .order-full-name__input {
     font-size: @txt-18px;
     flex-grow: 1;    
+    padding-left: 13px;
+    letter-spacing: 0.1px;
   }
  
 }
@@ -60,10 +67,11 @@
 
 @media @desktop-width {
   .order-full-name {
-    width: @desktop-contact-wrap;
+    width: @desktop-wrap;
   }
   
-  .order-full-name__input {
-    
-  }
+  .order-full-name__item {
+    width: 80%;
+  } 
+
 }
