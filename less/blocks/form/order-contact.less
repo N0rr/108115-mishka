@@ -1,24 +1,31 @@
-.order-contact {
-  margin-top: 13px;
-  
+.order-contact {  
+  margin-bottom: 36px;
   &__title {   
-    margin-bottom: 30px;    
+    margin-bottom: 22px;    
   }
   
   &__input-block {
     .form-input();
     .flex-row();
-    justify-content: space-between;
+    justify-content: space-between;    
+    margin-bottom: 42px;
   }
   
   &__input {
     border: none;
     outline: none;
     color: @grey-rgba;
+    letter-spacing: -0.7px;
+    height: 20px;    
+  }
+  
+  &__input-block--email {
+    padding-bottom: 7px;
+    margin-bottom: 0px;
   }
   
   &__icon {
-    margin-right: 8px;
+    margin-right: 8px;   
   }
   
   &__message {
@@ -31,17 +38,19 @@
     font-weight: 400;
     color: @grey-rgba;    
     border: 2px solid @black;
-    min-height: 130px;    
+    min-height: 117px;    
     resize: none;
-    margin-top: 4px;   
-    padding: 19px;  
+    margin-top: 12px;   
+    padding: 14px;  
+    margin-bottom: 18px;
   }
   
   &__submit {  
-    .center();
+    .center();    
     .btn-sub();
-    padding-right: 52px;
+    padding-right: 49px;
     padding-left: 52px;
+    margin-bottom: 30px;    
   }
 }
 
@@ -49,19 +58,30 @@
 @media @tablet-width {
   .order-contact {
     background: @grey-title;
-    padding-top: 72px;
-    padding-bottom: 67px;
+    padding-top: 53px;
+    padding-bottom: 50px;
     margin-bottom: 64px;
   }
   
   .order-contact__wrapper {
     .center();
+    .flex-row();
+    flex-wrap: wrap;
     width: @tablet-wrap;
+    justify-content: space-between;
+  }
+  
+  .order-contact__input-block {   
+    flex-grow: 1;  
+    width: 70%;
+    margin-bottom: 20px;
   }
   
   .order-contact__input {
     background: none;
-    font-size: @txt-18px;        
+    font-size: @txt-18px;      
+    height: auto;
+    padding-top: 15px;
   }
   
   .order-contact__icon {
@@ -77,7 +97,9 @@
   .order-contact__your-wish {
     font-size: @txt-18px; 
     flex-grow: 1;
-    margin-bottom: 53px;
+    margin-bottom: 52px;
+    margin-top: 0px;
+    min-height: 110px;
   }
   
   .order-contact__title {
@@ -108,28 +130,36 @@
 
 @media @desktop-width {
   .order-contact__wrapper {
-    width: @desktop-contact-wrap;
+    width: @desktop-wrap;
     .flex-row();
     flex-wrap: wrap;
+    justify-content: flex-start;
     
   }
   
   .order-contact__input-block {
-    flex-grow: 1;
-    width: 600px;
+    flex-grow: 0;
+    width: 68%;
   }
   
   .order-contact__message {
-    width: @desktop-contact-wrap;
+    width: @desktop-wrap;
+    margin-bottom: 39px;
   }
   
   .order-contact__submit-wrapper {
-    width: @desktop-contact-wrap;  
-    justify-content: flex-end;
+    width: @desktop-wrap;  
+    justify-content: center;
+    margin-bottom: 92px;
   }
   
   .order-contact__submit-span {
-   margin-left: 172px;
+   margin-left: 195px;
+  }
+  
+  .order-contact__your-wish {
+    min-width: 64%;
+    flex-grow: 0;
   }
 }
 

@@ -3,17 +3,24 @@
   .flex-row();
   flex-wrap: wrap;  
   padding: 30px; 
+  padding-bottom: 0;
+  margin-bottom: 2px;
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;    
 }
 
+@media @tablet-width {
+  .catalog-wrap {
+    
+  }
+}
 
 @media @desktop-width {
   .catalog-wrap {
     .flex-row();   
     width: @desktop-wrap;
-    padding: 0;  
-    margin-bottom: 57px;
+    padding: 0;      
+    margin-bottom: 50px;
   }
 }

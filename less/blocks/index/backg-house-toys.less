@@ -1,10 +1,13 @@
 .backg-house-toys {    
+  .flex(); 
+  align-items: center;
   background: @color-backg url(/img/hero-mobile@1x.jpg)no-repeat 50% 0%;
-  min-height: 310px;  
+  min-height: 300px;  
   
-  &__title {    
+  &__title { 
     .h1();   
-    padding-top: 53px;      
+    padding-top: 85px;
+    width: 80%;
   }  
  
 }
@@ -13,12 +16,13 @@
   .backg-house-toys {
     .flex();    
     background: @color-backg url(/img/hero-tablet.jpg)no-repeat 50% 0%;
-    width: 100%;
+    width: 100%;    
   }
   
   .backg-house-toys__title {    
     .h1(@h1-tablet);
-    line-height: 50px;
+    letter-spacing: -1px;
+    line-height: @line-50;
     margin-top: 150px;
     margin-bottom: 375px;
   }  
@@ -31,8 +35,8 @@
   }
   
   .backg-house-toys__title {
-    font-size: @h1-desktop;
-    margin-top: 165px;
-    margin-bottom: 360px;
+    font-size: @h1-desktop;   
+    margin-top: 155px;
+    margin-bottom: 370px;
   }
 }

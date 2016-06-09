@@ -1,11 +1,12 @@
 .order-option-color {  
   &__title {    
-    margin-bottom: 25px;
+    margin-bottom: 28px;
   }
   
   &__items {
     .flex-row();  
-    flex-wrap: wrap;  
+    flex-wrap: wrap; 
+    margin-bottom: 14px;
   }
   
   &__input:checked + &__item &__checkbox{
@@ -19,16 +20,17 @@
   }
   
   &__checkbox {    
-    height: 41px;
-    width: 40px;
+    height: 38px;
+    width: 37px;
     border: 2px solid @black;
-    margin-right: 24px;
-    margin-bottom: 30px;
+    margin-right: 21px;
+    margin-bottom: 22px;
   }
   
   &__text {    
     .txt-verdana(@txt-17px);
-    margin-top: -25px;     
+    margin-top: -25px; 
+    letter-spacing: -0.7px;
   }  
 }
 
@@ -39,8 +41,8 @@
     width: 100%;    
     background: @grey-title;
     padding-top: 61px;
-    padding-bottom: 41px;
-    margin-bottom: 67px;
+    padding-bottom: 27px;
+    margin-bottom: 63px;
   }
   
   .order-option-color__wrapper { 
@@ -52,25 +54,31 @@
   
   .order-option-color__items {
     .flex-row();
-    flex-basis: 466px;
+    flex-basis: 471px;
     flex-wrap: wrap;   
     justify-content: space-between;
     
   }
   
   .order-option-color__item {      
-    flex-basis: 210px;
+    flex-basis: 210px;     
+  }
+  
+  .order-option-color__checkbox {
+    height: 49px;
+    width: 49px;
+    margin-right: 28px;
   }
   
   .order-option-color__text {
-    font-size: @txt-18px;
+    font-size: @txt-18px;    
   }
 }
 
 
 @media @desktop-width {
   .order-option-color__wrapper {
-    width: @desktop-contact-wrap;
+    width: @desktop-wrap;
   }
   
   .order-option-color__items {
