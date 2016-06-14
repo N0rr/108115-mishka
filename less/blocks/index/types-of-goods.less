@@ -1,13 +1,28 @@
 .types-of-goods {  
   .center();
+  .flex();
+  flex-wrap: wrap;
   margin-bottom: 27px;
   
   &--item {
-    .flex-row();    
-    min-height: 103px;    
+    .flex-row();
+    .types-of-goods-hvr();
+    height: 103px;    
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
+    margin-bottom: -15px;
+  }
+  
+  & picture {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__zigzag {   
+    width: 100%;
+    height: 100%;
   }
   
   &__text {
@@ -15,18 +30,22 @@
     margin-left: 30px;
   }
   
-  &__home-furnishings {  
-    background: #63d1bb;     
+  &__home-furnishings { 
+    background: #63d1bb;
   }
   
   &__kids-toys {
-    background: #56c3b2;    
+    background: #56c3b2;
   }
   
   &__img-wrap {  
     .flex();
     width: 60px;  
     margin-right: 30px;
+    
+    & img {
+      fill: #3bb09d;      
+    }
   }
 }
 

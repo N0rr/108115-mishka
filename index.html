@@ -10,8 +10,16 @@
     <header class="header-menu">
       <div class="header-menu__header-wrap">
         <ul class="header-menu__items"> 
-          <li class="header-menu__item--logo">       
-            <img src="img/logo-mobile.svg" alt="," class="header-menu__logo"> 
+          <li class="header-menu__item--logo">
+            <a href="#">    
+              <picture>
+                <source media="(min-width: 1150px)"
+                srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)"
+                srcset="img/logo-tablet.svg">             
+                <img src="img/logo-mobile.svg" alt="," class="header-menu__logo">              
+              </picture>
+            </a>
             <input id="mobile-menu-toggle" type="checkbox" class="invisible"></input>
             <label class="header-menu__toggle" for="mobile-menu-toggle"></label>
           </li>   
@@ -60,7 +68,12 @@
         <a href="#" class="types-of-goods__kids-toys  types-of-goods--item">
           <span class="types-of-goods__text" href="#">Детские <br> игрушки</span>
           <div class="types-of-goods__img-wrap"><img src="img/icon-toy.svg" alt="Игрушка"></div>
-        </a>                
+        </a>
+        <picture>
+          <source media="(min-width: 768px)"
+          srcset="img/bg-zigzag-fill.svg">
+          <img class="types-of-goods__zigzag" width="100%" src="" alt="">
+        </picture>        
       </div>      
       
       <div class="product-of-the-week">
@@ -167,7 +180,7 @@
           <div class="contacts__block">
             <div class="contacts__text-style">
               <div class="contacts__contact-name">e-mail:</div>
-              <div class="contacts__contact-value">
+              <div class="contacts__contact-value  contacts__contact-value--email">
                 <a href="#" class="contacts__email-underline">info@mimimishkashop.</a>ru 
               </div>
             </div>
@@ -187,8 +200,13 @@
     </main>
     
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <a class="invisible  page-footer__logo" href="#"><img src="img/logo-mobile.svg" alt=""></a>
+      <div class="page-footer__wrapper">        
+        <a class="invisible  page-footer__logo" href="#">
+          <picture>
+            <source media="min-width: 1150px" srcset="img/logo-">            
+            <img src="img/logo-footer.svg" alt="">
+          </picture>          
+        </a> 
         <ul class="social-links">
           <li class="social-links__link  social-links--instg">
             <a href="#"><img src="img/icon-insta.svg" alt=""><span class="invisible">instagram</span></a>
@@ -204,7 +222,7 @@
         <div class="page-footer__line"></div>
         <div class="page-footer__designed-by">
           <h3>Разработано</h3>
-          <a href="#">
+          <a href="#">            
             <img src="img/logo-htmlacademy.svg" alt="">
           </a>
         </div>

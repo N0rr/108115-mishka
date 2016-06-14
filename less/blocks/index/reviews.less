@@ -10,7 +10,7 @@
   
   &__title {
     .h1();
-    color: #000000;
+    color: @black;
     margin-bottom: 25px;
     text-align: left;
   }
@@ -63,10 +63,13 @@
 @media @tablet-width {
   .reviews {    
     padding: 0;    
-    background: url(/img/review.jpg)no-repeat 0% 0%;
+    background: url(/img/review.jpg)no-repeat 0% 0%;    
     width: 768px;
     min-height: 457px;
     margin-bottom: 72px;
+    @media @retina {
+      background: url(/img/review@2x.jpg)no-repeat 0% 0%; 
+    }
   }
   
   .reviews__wrap {

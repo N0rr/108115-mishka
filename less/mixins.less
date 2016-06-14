@@ -52,6 +52,14 @@
   max-width: @width;
   background: @white;
   cursor: pointer;
+  
+  &:hover {
+    background: @color-444;
+    color: @white;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);    
+  }
 }
 
 .page-title() {
@@ -126,3 +134,5 @@
   display: block;
   clear: both;
 }
+
+

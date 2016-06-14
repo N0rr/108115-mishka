@@ -10,8 +10,16 @@
     <header class="header-menu">
       <div class="header-menu__header-wrap">
         <ul class="header-menu__items"> 
-          <li class="header-menu__item--logo">       
-            <img src="img/logo-mobile.svg" alt="," class="header-menu__logo"> 
+          <li class="header-menu__item--logo">
+            <a href="#">    
+              <picture>
+                 <source media="(min-width: 1150px)"
+                srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)"
+                srcset="img/logo-tablet.svg">             
+                <img src="img/logo-mobile.svg" alt="," class="header-menu__logo">              
+              </picture>
+            </a>
             <input id="mobile-menu-toggle" type="checkbox" class="invisible"></input>
             <label class="header-menu__toggle" for="mobile-menu-toggle"></label>
           </li>   
@@ -50,13 +58,21 @@
     <main>
       <div class="catalog-title">
         <h1 class="catalog-title__title">Каталог товаров</h1>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/bg-zigzag-fill.svg">
+          <img class="catalog-title__zigzag" src="" alt="" width="100%" >
+        </picture>
       </div>
       
       <div class="catalog-wrap">
         <article class="catalog-item">
           <a class="catalog-item__link" href="#">
             <div class="catalog-item__img-item">
-              <img class="catalog-item__img" src="img/photo-1-mobile@1x.jpg" alt="">             
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg, img/photo-1-tablet@2x.jpg 2x">
+                <img class="catalog-item__img" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="">
+              </picture>                           
             </div>
             <div class="catalog-item__description">
               <h3 class="catalog-item__item-title">Зайчик-попрыгайчик</h3>
@@ -72,7 +88,11 @@
         <article class="catalog-item">
           <a class="catalog-item__link" href="#">
             <div class="catalog-item__img-item">
-              <img class="catalog-item__img" src="img/photo-2-mobile@1x.jpg" alt="">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg, img/photo-2-tablet@2x.jpg 2x">
+                <img class="catalog-item__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="">
+              </picture>
             </div>
             <div class="catalog-item__description">
               <h3 class="catalog-item__item-title">Корзинка для белья</h3>
@@ -88,7 +108,11 @@
         <article class="catalog-item">
           <a class="catalog-item__link" href="#">
             <div class="catalog-item__img-item">
-              <img class="catalog-item__img" src="img/photo-3-mobile@1x.jpg" alt="">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg, img/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg, img/photo-3-tablet@2x.jpg 2x">
+                <img class="catalog-item__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="">
+              </picture>
             </div>
             <div class="catalog-item__description">
               <h3 class="catalog-item__item-title">Большая корзинка <br> для игрушек</h3>
@@ -110,7 +134,11 @@
         </div>
         
         <div class="production-process__video">
-          <img src="img/video-desktop.jpg" alt="">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg, img/video-tablet@2x.jpg">
+            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="">
+          </picture>
         </div>
         
         <p class="production-process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>        
@@ -120,7 +148,12 @@
     
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="invisible  page-footer__logo" href="#"><img src="img/logo-mobile.svg" alt=""></a>
+        <a class="invisible  page-footer__logo" href="#">
+          <picture>
+            <source media="min-width: 1150px" srcset="img/logo-">            
+            <img src="img/logo-footer.svg" alt="">
+          </picture>
+        </a>
         <ul class="social-links">
           <li class="social-links__link  social-links--instg">
             <a href="#"><img src="img/icon-insta.svg" alt=""><span class="invisible">instagram</span></a>
