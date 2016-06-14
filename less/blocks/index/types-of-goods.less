@@ -1,5 +1,7 @@
 .types-of-goods {  
   .center();
+  .flex();
+  flex-wrap: wrap;
   margin-bottom: 27px;
   
   &--item {
@@ -8,7 +10,12 @@
     height: 103px;    
     justify-content: space-between;
     align-items: center;
-    text-decoration: none;    
+    text-decoration: none;
+    margin-bottom: -10px;
+  }
+  
+  &__zigzag {   
+    width: 100%;
   }
   
   &__text {
@@ -17,17 +24,21 @@
   }
   
   &__home-furnishings { 
-    background: #63d1bb; 
+    background: #63d1bb;
   }
   
   &__kids-toys {
-    background: #56c3b2;    
+    background: #56c3b2;
   }
   
   &__img-wrap {  
     .flex();
     width: 60px;  
     margin-right: 30px;
+    
+    & img {
+      fill: #3bb09d;      
+    }
   }
 }
 

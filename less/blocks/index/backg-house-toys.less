@@ -3,6 +3,9 @@
   align-items: center;
   background: @color-backg url(/img/hero-mobile@1x.jpg)no-repeat 50% 0%;
   min-height: 300px;  
+  @media @retina {
+    background: @color-backg url(/img/hero-mobile@2x.jpg)no-repeat 50% 0%;
+  }
   
   &__title { 
     .h1();   
@@ -15,8 +18,11 @@
 @media @tablet-width {
   .backg-house-toys {
     .flex();    
-    background: @color-backg url(/img/hero-tablet.jpg)no-repeat 50% 0%;
-    width: 100%;    
+    background: @color-backg url(/img/hero-mobile@2x.jpg)no-repeat 50% 0%;
+    width: 100%;
+    @media @retina {
+      background: @color-backg url(/img/hero-desktop@2x.jpg)no-repeat 50% 0%;
+    }
   }
   
   .backg-house-toys__title {    
@@ -30,8 +36,13 @@
 
 
 @media @desktop-width {
-  .backg-house-toys {
-    background: @color-backg url(/img/hero-desktop.jpg)no-repeat 50% 0%;
+  .backg-house-toys {  
+    background: @color-backg url(/img/hero-mobile@2x.jpg)no-repeat 50% 0%;
+    @media @retina {
+      background: @color-backg url(/img/hero-desktop@2x.jpg)no-repeat 50% 0%;
+      height: 100%;
+      width: auto;
+    }
   }
   
   .backg-house-toys__title {

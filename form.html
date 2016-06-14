@@ -10,8 +10,16 @@
     <header class="header-menu">
       <div class="header-menu__header-wrap">
         <ul class="header-menu__items"> 
-          <li class="header-menu__item--logo">       
-            <img src="img/logo-mobile.svg" alt="," class="header-menu__logo"> 
+          <li class="header-menu__item--logo">
+            <a href="#">    
+              <picture>
+                 <source media="(min-width: 1150px)"
+                srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)"
+                srcset="img/logo-tablet.svg">             
+                <img src="img/logo-mobile.svg" alt="," class="header-menu__logo">              
+              </picture>
+            </a>
             <input id="mobile-menu-toggle" type="checkbox" class="invisible"></input>
             <label class="header-menu__toggle" for="mobile-menu-toggle"></label>
           </li>   
@@ -189,7 +197,12 @@
     
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="invisible  page-footer__logo" href="#"><img src="img/logo-mobile.svg" alt=""></a>
+        <a class="invisible  page-footer__logo" href="#">
+          <picture>
+            <source media="min-width: 1150px" srcset="img/logo-">            
+            <img src="img/logo-footer.svg" alt="">
+          </picture>
+        </a>
         <ul class="social-links">
           <li class="social-links__link  social-links--instg">
             <a href="#"><img src="img/icon-insta.svg" alt=""><span class="invisible">instagram</span></a>

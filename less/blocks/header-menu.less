@@ -17,7 +17,7 @@
   }  
   
   &__logo {
-    .center();
+    .center();    
   }  
   
   & input:checked + &__toggle {
@@ -43,10 +43,10 @@
   &__toggle {
     display: block; 
     width: 21px;
-    height: 20px;
-    margin-right: 30px;
-    margin-top: 7px;
-    margin-left: -50px;
+    height: 20px;    
+    margin-top: 7px;  
+    margin-right: -25%;
+    margin-left: 20%;
     
     &:after {
       content: '';
@@ -226,9 +226,11 @@
   
   .header-menu__item--logo {
     .flex();
-    align-items: center;    
+    align-items: center;   
+    justify-content: flex-start;
     min-width: 150px;   
-    order: 3;   
+    order: 3;
+    padding: 0;
   }
   
   .header-menu__item--catalog {
