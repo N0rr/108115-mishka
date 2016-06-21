@@ -20,11 +20,6 @@
     padding: 0;
   }
   
-  &__zigzag {   
-    width: 100%;
-    height: 100%;
-  }
-  
   &__text {
     .txt-tahoma(@txt-18px, @color: @white);   
     margin-left: 30px;
@@ -42,10 +37,7 @@
     .flex();
     width: 60px;  
     margin-right: 30px;
-    
-    & img {
-      fill: #3bb09d;      
-    }
+    opacity: 0.7; 
   }
 }
 
@@ -72,7 +64,12 @@
     .txt-tahoma(@txt-20px, @line: @line-30, @color: @white);
     margin-left: 35px;
   }
+  
+  .types-of-goods__zigzag {
+    .visible();  
+  }
 }
+
 
 @media @desktop-width {
   .types-of-goods {
@@ -82,6 +79,9 @@
   
   .types-of-goods--item {
     justify-content: space-between;
+  }
+  .types-of-goods__zigzag {
+    
   }
 }
   
