@@ -13,23 +13,19 @@
     background: @footer-line;
     height: 1px;   
     margin-bottom: 24px;
-  }
-  
-  &__designed-by {    
-    .flex-row();    
-    justify-content: center;
-    align-content: center;
-    align-items: center;  
-  & h3 {
-    .txt-verdana(@txt-18px);
-    margin-right: 25px;    
-    }
-  }
+  } 
   
   &__designed-link {
     .flex-row();
     .footer-link-hvr();
-    text-decoration: none;
+    text-decoration: none;      
+    justify-content: center;
+    align-content: center;
+    align-items: center; 
+    & h3 {
+      .txt-verdana(@txt-18px);
+      margin-right: 25px;    
+    }
   }
 }
 
@@ -37,16 +33,16 @@
 @media @tablet-width {
   .page-footer {
     .flex();
-    justify-content: space-between;  
+    justify-content: center;  
+    align-items: center;
     padding: 0;
   }
   
   .page-footer__wrapper {
-    .center();
-    .flex-row();
-    align-items: center;
+    .flex-row();    
+    align-items: center;    
     width: @tablet-wrap;
-    justify-content: space-between;
+    justify-content: space-between;    
     min-height: 143px;
   }
   
