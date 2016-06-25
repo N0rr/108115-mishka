@@ -1,7 +1,9 @@
 @mobile-width: ~ '(min-width: 320px)';
 @tablet-width: ~ '(min-width: 768px)';
 @desktop-width: ~ '(min-width: 1150px)';
-@retina: ~ '(min-resolution: 144dpi), (min-resolution: 1.5dppx)';
+@retina-1: ~ '(min-resolution: 144dpi)';
+@retina-2: ~ '(min-resolution: 1.5dppx)';
+@retina: @retina-1, @retina-2;
 
 @desktop-wrap: 1048px;
 @desktop-contact-wrap: 845px;
