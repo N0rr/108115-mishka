@@ -86,16 +86,11 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("htmlCopy", function() {
-  gulp.src("*.html").pipe(gulp.dest("build"));
-});
-
 gulp.task("serve", function() {
   server.init({
     server: "build"    
-  });  
+  });    
   
-  gulp.watch(["htmlCopy"]);
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
   gulp.watch("css/**/*.css").on("change", server.reload);    
