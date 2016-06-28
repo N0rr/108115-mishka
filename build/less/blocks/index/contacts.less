@@ -1,0 +1,119 @@
+.contacts {
+  .center();
+  margin-top: 35px;
+  width: @mobile-wrap;  
+}
+.contacts__title {
+  .h1();    
+  margin-bottom: 23px;
+  text-align: left;
+}
+
+.contacts__text-style {
+  .flex-row();
+  .txt-opensans();
+  margin-bottom: 30px;   
+}
+
+.contacts__contact-name {
+  .txt-opensans(@txt-16px);
+  display: block;
+  vertical-align: baseline;
+  min-width: 60px;
+  margin-right: 15px;    
+}
+
+.contacts__contact-value {
+  .txt-opensans(@txt-14px);    
+}
+
+.contacts__contact-value--email {
+  .reviews-mail();
+  color: @color-444;
+}
+
+.contacts__email-underline {  
+  color: @color-444;
+  text-decoration: none;
+  border-bottom: 1px solid #62d1ba;
+}
+
+
+@media @tablet-width {
+  .contacts {
+    .flex-row();
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: @tablet-wrap; 
+    margin-top: 41px; 
+    margin-bottom: 28px;
+  }
+  
+  .contacts__title {
+    .h1(@h1-tablet, @black, 50px);
+    margin-bottom: 50px;
+    text-align: left;    
+    justify-content: space-between;
+    margin-top: 13px;
+  }
+  
+  .contacts__img {
+    display: block;
+    width: 47px;
+    height: 81px;
+    margin-right: 4px;
+  }
+  
+  .contacts__block {
+    .flex-row();   
+    width: 100%;
+  }
+  
+  .contacts__text-style {  
+    width: 50%;
+  }
+  
+  .contacts__contact-value {
+    font-size: @txt-16px;    
+  }  
+}
+
+
+@media @desktop-width {
+  .contacts { 
+    float: left;
+    width: 400px;
+    justify-content: flex-start; 
+    margin: 0;
+    margin-top: 59px;    
+    margin-left: 60px;
+    margin-bottom: 50px;
+  }
+  
+  .contacts__title {
+    font-size: @h1-desktop; 
+    letter-spacing: -1px;
+    margin-bottom: 53px;
+  }
+  
+  .contacts__img {
+    order: -1; 
+    margin-right: 63px;
+  }
+  
+  .contacts__block {
+    .flex();
+    justify-content: flex-end;
+    align-items: flex-end;    
+    margin-bottom: 0px;
+  }
+  
+  .contacts__text-style {
+    margin-bottom: 30px;
+    width: 72%;
+  }
+  
+  .contacts__contact-name {
+    margin-right: 18px;
+  }  
+}
