@@ -1,66 +1,68 @@
 .order-contact {  
   margin-bottom: 36px;
-  &__title {   
-    margin-bottom: 22px;
-    & h3 {
-      white-space: nowrap;
-    }
-  }
-  
-  &__input-block {    
-    .flex-row();
-    justify-content: space-between;    
-    margin-bottom: 42px;
-  }
-  
-  &__input {
-    .form-input();  
-    .input-hvr();
-    outline: none;
-    color: @grey-rgba;
-    letter-spacing: -0.7px;
-    height: 20px;  
-    width: 100%; 
-    margin-right: -35px;
-  }
-  
-  &__input--mail {    
-    margin-bottom: 0px;
-    margin-right: -41px;
-  }
-  
-  &__icon {     
-    margin-right: 10px;
-    margin-bottom: 20px;
-  }
-  
-  &__message {
-    .flex();
-    margin-bottom: 40px;
-  }
-  
-  &__your-wish {
-    .form-label();
-    .textarea-hvr();
-    outline: none;
-    font-weight: 400;
-    color: @grey-rgba;    
-    border: 2px solid @black;
-    min-height: 117px;    
-    resize: none;
-    margin-top: 12px;   
-    padding: 14px;  
-    margin-bottom: 18px;
-  }
-  
-  &__submit {  
-    .center();    
-    .btn-sub();
-    padding-right: 49px;
-    padding-left: 52px;
-    margin-bottom: 30px;    
-  }
 }
+
+.order-contact__title {   
+  margin-bottom: 22px;
+}
+.order-contact h3 {
+  white-space: nowrap;
+}  
+  
+.order-contact__input-block {    
+  .flex-row();
+  justify-content: space-between;    
+  margin-bottom: 42px;
+}
+
+.order-contact__input {
+  .form-input();  
+  .input-hvr();
+  outline: none;
+  color: @grey-rgba;
+  letter-spacing: -0.7px;
+  height: 20px;  
+  width: 100%; 
+  margin-right: -35px;
+}
+
+.order-contact__input--mail {    
+  margin-bottom: 0px;
+  margin-right: -41px;
+}
+
+.order-contact__icon {     
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.order-contact__message {
+  .flex();
+  margin-bottom: 40px;
+}
+
+.order-contact__your-wish {
+  .form-label();
+  .textarea-hvr();
+  outline: none;
+  font-weight: 400;
+  color: @grey-rgba;    
+  border: 2px solid @black;
+  min-height: 117px;    
+  resize: none;
+  margin-top: 12px;   
+  padding: 14px;  
+  margin-bottom: 18px;
+}
+
+.order-contact__submit {  
+  .center();    
+  .btn-sub();
+  padding-right: 49px;
+  padding-left: 52px;
+  margin-bottom: 30px;    
+}
+
 
 
 @media @tablet-width {

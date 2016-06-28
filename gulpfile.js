@@ -86,12 +86,21 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("htmlCopy", function() {
+  return gulp.src ([    
+    "*.html"
+  ], {
+    base: "."
+  })
+  .pipe(gulp.dest("build"))
+});
+
 gulp.task("serve", function() {
   server.init({
-    server: "build"    
-  });    
+    server: "."
+  });   
   
-  gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("*.html", ["htmlCopy"]).on("change", server.reload);
+  gulp.watch("less/**/*.less", ["style"]); 
   gulp.watch("css/**/*.css").on("change", server.reload);    
 });

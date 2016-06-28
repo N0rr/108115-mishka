@@ -3,43 +3,44 @@
   .flex();
   flex-wrap: wrap;
   margin-bottom: 27px;
-  
-  &--item {
-    .flex-row();
-    .types-of-goods-hvr();
-    height: 103px;    
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    margin-bottom: -15px;
-  }
-  
-  & picture {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  &__text {
-    .txt-tahoma(@txt-18px, @color: @white);   
-    margin-left: 30px;
-  }
-  
-  &__home-furnishings { 
-    background: #63d1bb;
-  }
-  
-  &__kids-toys {
-    background: #56c3b2;
-  }
-  
-  &__img-wrap {  
-    .flex();
-    width: 60px;  
-    margin-right: 30px;
-    opacity: 0.7; 
-  }
 }
+  
+.types-of-goods--item {
+  .flex-row();
+  .types-of-goods-hvr();
+  height: 103px;    
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: -15px;
+}
+
+.types-of-goods picture {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.types-of-goods__text {
+  .txt-tahoma(@txt-18px, @color: @white);   
+  margin-left: 30px;
+}
+
+.types-of-goods__home-furnishings { 
+  background: #63d1bb;
+}
+
+.types-of-goods__kids-toys {
+  background: #56c3b2;
+}
+
+.types-of-goods__img-wrap {  
+  .flex();
+  width: 60px;  
+  margin-right: 30px;
+  opacity: 0.7; 
+}
+
 
 
 @media @tablet-width {
@@ -47,7 +48,7 @@
     .center();
     .flex-row();  
     width: @tablet-wrap;  
-    margin-bottom: 43px;    
+    margin-bottom: 24px;    
   }
   
   .types-of-goods--item {    
@@ -82,7 +83,7 @@
     justify-content: space-between;
   }
   .types-of-goods__zigzag {
-    
+    margin-bottom: -19px;
   }
 }
   

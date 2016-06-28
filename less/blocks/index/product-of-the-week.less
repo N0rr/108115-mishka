@@ -1,88 +1,91 @@
 .product-of-the-week {  
   .center();
-  &__product {
-    .flex();
-    align-items: center; 
-  }
-  
-  &__ title {
-    margin-bottom: 31px;
-  }
-  
-  &__title-h1 {
-    .h1(); 
-    margin-bottom: 5px;
-  }
+}
 
-  &__title-h2 {
-    .txt-opensans(@txt-16px, @weight: 700, @line: 16px);   
-    color: @site-color;    
-    text-align: left;   
-    margin-bottom: 26px;
-  }
-  
-  &__info {
-    .flex();
-    align-items: center;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-bottom: 26px;
-  }
+.product-of-the-week__product {
+  .flex();
+  align-items: center; 
+}
 
-  &__text {      
-    .txt-opensans(@line: @line-24);    
-    margin-bottom: 15px;
-    width: @mobile-wrap;
-  } 
+.product-of-the-week__ title {
+  margin-bottom: 31px;
+}
+
+.product-of-the-week__title-h1 {
+  .h1(); 
+  margin-bottom: 5px;
+}
+
+.product-of-the-week__title-h2 {
+  .txt-opensans(@txt-16px, @weight: 700, @line: 16px);   
+  color: @site-color;    
+  text-align: left;   
+  margin-bottom: 26px;
+}
+
+.product-of-the-week__info {
+  .flex();
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 26px;
+}
+
+.product-of-the-week__text {      
+  .txt-opensans(@line: @line-24);    
+  margin-bottom: 15px;
+  width: @mobile-wrap;
+} 
+
+.product-of-the-week__table {     
+  align-items: center;
+  width: @mobile-wrap; 
+}
+
+.product-of-the-week__specifics {       
+  .flex-row();
+  .txt-opensans(@line: 20px);
+  align-items: flex-start;    
+  border-bottom: 1px solid @grey;    
+  padding-bottom: 8px;
+  padding-top: 10px;
+}
+
+.product-of-the-week__specifics-name {      
+  min-width: 62px;
+  margin-right: 27px;     
+}
+
+.product-of-the-week__specifics-value {
+  align-self: flex-start;
+}
+
+.product-of-the-week__product-photo {    
+  height: 315px;
+  width: 260px;
+  margin-top: -2px;
+  margin-bottom: 24px;
+  background: url(/img/triple-set-mobile@1x.jpg) 50% 50%;
   
-  &__table {     
-    align-items: center;
-    width: @mobile-wrap; 
-  }
-  
-  &__specifics {       
-    .flex-row();
-    .txt-opensans(@line: 20px);
-    align-items: flex-start;    
-    border-bottom: 1px solid @grey;    
-    padding-bottom: 8px;
-    padding-top: 10px;
-    
-    &-name {      
-      min-width: 62px;
-      margin-right: 27px;     
-    }
-    
-    &-value {
-      align-self: flex-start;
-    }
-  }
-  
-  &__product-photo {    
-    height: 315px;
-    width: 260px;
-    margin-top: -2px;
-    margin-bottom: 24px;
-    background: url(/img/triple-set-mobile@1x.jpg) 50% 50%;
-    
-    @media @retina {
-      background: url(/img/triple-set-mobile@2x.jpg) 50% 50%;
-      background-size: cover;
-    }
-  }
-  
-  &__price {
-    .txt-verdana();
-    text-align: center; 
-    color: @color-444;
-    margin-bottom: 25px;
-  }  
-  &__buy {
-    .btn-sub();
-    margin-bottom: 26px;    
-    min-width: (@mobile-wrap - 4px);    
+  @media @retina {
+    background: url(/img/triple-set-mobile@2x.jpg) 50% 50%;
+    background-size: cover;
   }
 }
+
+.product-of-the-week__price {
+  .txt-verdana();
+  text-align: center; 
+  color: @color-444;
+  margin-bottom: 25px;
+}  
+
+.product-of-the-week__buy {
+  .btn-sub();
+  margin-bottom: 26px;    
+  min-width: (@mobile-wrap - 4px);    
+}
+
 
 
 @media @tablet-width {
